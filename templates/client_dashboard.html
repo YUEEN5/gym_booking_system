@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">DadGym</div>
+  <a href="/logout" class="logout">Logout</a>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <div class="form-row">
+      <select id="trainer"></select>
+    </div>
+  </div>
+
+  <div class="card" id="calendarCard">
+    <h3 id="monthTitle"></h3>
+    <div style="display:flex;justify-content:space-between;margin-bottom:10px;">
+      <button onclick="prevMonth()">←</button>
+      <button onclick="nextMonth()">→</button>
+    </div>
+    <div id="calendar" class="calendar"></div>
+  </div>
+
+  <div class="card" id="slotCard" style="display:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <h3 id="selectedDateTitle"></h3>
+      <button onclick="goBack()">← Back</button>
+    </div>
+
+    <div id="slots"></div>
+  </div>
+
+</div>
+
+<script src="/static/client.js"></script>
+</body>
+</html>

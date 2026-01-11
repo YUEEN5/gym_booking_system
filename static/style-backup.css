@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f9;
+  color: #222;
+}
+
+header {
+  background: #111827;
+  color: white;
+  padding: 16px 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  margin-bottom: 24px;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.day.past { 
+  background: #111;   /* black */
+  color: #fff;        /* white number for contrast */
+  cursor: default; 
+}
+
+.day.grey { background: #e5e7eb; cursor: default; }
+.day.green { background: #34d399; cursor: pointer; }
+.day.red { background: #f87171; cursor: pointer; }
+
+.day {
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  color: #111827;
+  font-weight: 500;
+  transition: transform 0.1s;
+}
+.day:hover { transform: scale(1.05); }
+
+
+.day-number {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.slot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.available {
+  border-left: 6px solid #22c55e;
+}
+
+.booked {
+  border-left: 6px solid #ef4444;
+  opacity: 0.8;
+}
+
+.gray {
+  background: #e5e7eb;
+}
+
+.badge {
+  background: #e5e7eb;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.topbar {
+  background: #111827;
+  color: white;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.logout {
+  color: #f87171;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.logout:hover {
+  text-decoration: underline;
+}
